@@ -1,0 +1,79 @@
+﻿							()/:-make the user roles
+							()/:-integrate google maps onto a page with different partial views for a map to set up finding places to stay and organizing routs to take 
+							()/:- make a group page for students and tenants
+							()/:- create pages and links to each page
+							()/:- create the forums for each option
+							()/:- extend the group page to organize personal belongings between roommates
+							()/:- create a mobile app using mobileframe/sitefinity to set up the app
+							()/:- make sure pages on the mobile app can do everything properly
+							()/:- tweak mobile app to run the same way the website runs
+							()/:- set up a page for admins and landlords that has a Google map for landlords that shows places available to stay\
+								  \admins have a list on available dorms to move to or into
+							()/:- tweak the look of the website to look more organized/visually nice to look at
+							()/:- make sure each page and feature runs properly and leads to pages that work and nothing breaks the site
+
+							
+
+
+
+
+	One> User roles that are able to  be created are    
+							1. a dorm admin 
+							2. a landlord
+							3. a dorm student and 
+							4. a residential student.
+			1.Dorm+Admins:
+				+have the ability to manage the dorms that they are responsible for.\
+				  \That includes keeping their list updated to let students and soon to be students looking for a place to live for the year or a semester.
+
+			2.LandLord: 
+				+Add Locations, description, electronics, damage, rooms, ect. for each house 
+				+Leave personal information 					
+
+			3.Studednt(D0RM):
+				+
+
+			4.Student(Residential):
+				+ Be able to use google maps API in order to be able to set pins on a group map for potential places to live
+				+ On a personal map be able
+
+	Two>
+
+	Three>
+
+	Four>
+
+	Five>
+
+}
+
+<head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPs0RYxtDYc-TMk_R_UGaMXZla8PreblE&callback=initMap"
+            async defer></script>
+</body>

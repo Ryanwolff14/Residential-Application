@@ -1,0 +1,213 @@
+﻿@using Microsoft.AspNet.Identity
+
+
+@model Residential_capstone_project.Models.IndexViewModel
+
+
+
+
+@*<div class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <p>One fine body…</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>*@
+
+<div class="jumbotron" style="background-image:url('../../Content/images/misc/background4.jpg'); background-size:cover">
+    <h1 style="font-family:Stencil; text-align:right; "> Hello  @User.Identity.GetUserName() </h1>
+    <div class="panel navbar-right panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title" style="text-align:center">User Features</h3>
+        </div>
+        <div class="panel-body">
+            <ul class="nav nav-pills nav-stacked">
+                <ui class="btn bg-primary" >
+                    <li> <a href="~/Forum/ForumsProfile"> Forums Profile &ni;</a></li>
+                </ui>
+                <li class="dropdown bg-primary">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"><span class="caret"></span>
+                        User abilities 
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>Forum System</li>
+                        <li class="divider"></li>
+                        <li> <a href="~/Forum/Report_Forum"> Post to Forums &ni;</a></li>
+                        <li> <a href="~/Forum/Message_Board"> Message Board &ni;</a></li>
+                        <li class="divider"></li>
+                        <li>Personal Route Map</li>
+                        <li> <a href="~/Manage/PersonalRoute"> Personal Route Map &raquo;</a> </li>
+                        <li class="divider"></li>
+                        <li>User Profile Maps</li>
+                        <li> <a href="~/Maps/EditPersonalMap"> Edit Personal Map &ni;</a></li>
+                        <li> <a href="~/Maps/GroupMap"> Group Map &ni;</a></li>
+                        <li> <a href="~/Maps/PersonalMap"> Personal Map &ni;</a></li>
+                        <li> <a href="~/Maps/LandlordMap"> Personal Map(landlord) &ni;</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <dl class="container media-right" style="">
+        <dt>Profile Picture:</dt>
+        <dd>
+            @if (User.Identity.GetUserName() != null)
+            {
+                var imgUrl = Url.Content("~/Content/images/profile/" + User.Identity.GetUserName() + ".png") + "?time=" + DateTime.Now.ToString();
+                <div class="upimage"
+                 <div class="accimg">
+                     <img src="@imgUrl" height="250" width="250" style="  />
+                 </div>
+                 <div class="mngimg">
+                     @using (Html.BeginForm("UploadPhoto", "Manage", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                     {
+                         <div class="btn btn-default browseing">
+                             <input type="file" name="file" id="files" onchange="this.form.submit()" />
+                         </div>
+                     }
+                 </div>
+
+                }
+            </dd>
+        </dl>
+
+
+    </div>
+
+    <div class="panel table-striped " style="">
+    <div class="panel-heading">
+        <h4>Change your account settings</h4>
+    </div>
+
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title">User Info</h3>
+        </div>
+        <div class="panel-body">
+            Change settings
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Password</h3>
+        </div>
+        <div class="panel-body">
+            <dd>
+                [
+                @if (Model.HasPassword)
+                {
+                    @Html.ActionLink("Change your password", "ChangePassword")
+                }
+                else
+                {
+                    @Html.ActionLink("Create", "SetPassword")
+                }
+                ]
+            </dd>
+        </div>
+    </div>
+
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title">External Logins</h3>
+        </div>
+        <div class="panel-body">
+
+            @Model.Logins.Count [
+            @Html.ActionLink("Manage", "ManageLogins") ]
+
+        </div>
+    </div>
+
+
+    @*<dl class="dl-horizontal">
+        <dt>Password:</dt>
+        <dd>
+            [
+            @if (Model.HasPassword)
+            {
+                @Html.ActionLink("Change your password", "ChangePassword")
+            }
+            else
+            {
+                @Html.ActionLink("Create", "SetPassword")
+            }
+            ]
+        </dd>
+        <dt>External Logins:</dt>
+        <dd>
+            @Model.Logins.Count [
+            @Html.ActionLink("Manage", "ManageLogins") ]
+        </dd>*@
+
+
+    @*
+        Phone Numbers can used as a second factor of verification in a two-factor authentication system.
+
+         See <a href="http://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
+            for details on setting up this ASP.NET application to support two-factor authentication using SMS.
+
+         Uncomment the following block after you have set up two-factor authentication
+    *@
+    @*
+        <dt>Phone Number:</dt>
+        <dd>
+            @(Model.PhoneNumber ?? "None")
+            @if (Model.PhoneNumber != null)
+            {
+                <br />
+                <text>[&nbsp;&nbsp;@Html.ActionLink("Change", "AddPhoneNumber")&nbsp;&nbsp;]</text>
+                using (Html.BeginForm("RemovePhoneNumber", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <text>[<input type="submit" value="Remove" class="btn-link" />]</text>
+                }
+            }
+            else
+            {
+                <text>[&nbsp;&nbsp;@Html.ActionLink("Add", "AddPhoneNumber")
+            }
+        </dd>
+    *@
+
+
+    @*<dt>Two-Factor Authentication:</dt>
+        <dd>
+            <p>
+            </p>*@
+
+
+    @*@if (Model.TwoFactor)
+        {
+            using (Html.BeginForm("DisableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                <text>Enabled
+                <input type="submit" value="Disable" class="btn btn-link" />
+                </text>
+            }
+        }
+        else
+        {
+            using (Html.BeginForm("EnableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                <text>Disabled
+                <input type="submit" value="Enable" class="btn btn-link" />
+                </text>
+            }
+        }*@
+    </dd>
+    </dl>
+</div>
+

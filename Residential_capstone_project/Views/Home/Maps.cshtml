@@ -1,0 +1,39 @@
+﻿
+
+<h3>@ViewBag.Message</h3>
+
+<div class="jumbotron">
+    <h1>Maps</h1>
+    <ul class="nav nav-tabs">
+        <li class="btn btn-primary"><a href="#home" data-toggle="tab" aria-expanded="false">Home</a></li>
+        <li class="btn btn-warning"><a href="#Group" data-toggle="tab" aria-expanded="true">Group</a></li>
+        <li class="btn btn-primary"><a href="#Personal" data-toggle="tab" aria-expanded="true">Personal</a></li>
+        <li class="btn btn-warning"><a href="#Landlord" data-toggle="tab" aria-expanded="true">Landlord</a></li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade" id="home">
+            <p>Use the user maps to be able to add locations and create routes to places that you need to goto for classes ect. </p>
+        </div>
+        <div class="tab-pane fade" id="Group">
+            <p>This map can be used to search around your school and add places to with other users that were added by the admin that you might want to rent </p>
+            @*<strong class="btn btn-primary enabled">Group Map   <a href="~/Maps/GroupMap"> Link &ETH;</a> <</strong>*@
+        </div>
+        <div class="tab-pane fade" id="Personal">
+            <p>maps for you to find places to live/rent</p>
+            <strong class="btn btn-warning enabled">Personal Map <a href="~/Map/EditMap.aspx"> Link &ETH; </a></strong>
+            <strong class="btn btn-warning enabled">Route Map<a href="~/Map/Map.aspx"> Link &ETH; </a></strong>
+            <strong class="btn btn-warning enabled">Places map<a href="~/Map/PersonalHtmlMap.html"> Link &ETH; </a></strong>
+            <strong class="btn btn-warning enabled">Personal Map <a href="~/Map/PersonalMap.html"> Link &ETH; </a></strong>
+            <strong class="btn btn-warning enabled">Route Map<a href="~/Map/PlacesMap.html"> Link &ETH; </a></strong>
+            <strong class="btn btn-warning enabled">Places map<a href="~/Map/PlacesHtmlMap.html"> Link &ETH; </a></strong>
+
+        </div>
+        <div class="tab-pane fade" id="Landlord">
+            <p>This map can be used to add locations that you own and are available or not to be rented by students with breif discriptions for each </p>
+            @*<a href="~/Maps/LandlordMap"> <strong class="btn btn-primary enabled">Landlord Map   <</strong> Link &ETH;</a>*@ 
+        </div>
+    </div>
+    
+    
+
+</div>

@@ -1,0 +1,86 @@
+﻿Project idea #8 {
+			
+					-Mobile Website for Residential Life
+
+	
+			What it does: 
+					*	for Residential Life that would provide Res Life individuals the ability to check students into and out of dorm rooms
+					(e.g., tracking existing damage) using a smart phone or tablet. Currently Res Life uses paper forms, requiring significant effort 
+					in hand-entry of details and management of the forms during the year. This online website would alleviate much of that burden.
+					*	the smart phone app would just be a mobile version of the site with the same features just more organized and compressed
+					*	the ability to organize with a group on finding an apartment/duplex/or house to rent with them or for yourself
+					*	Google maps integration for mapping out potential places to stay and when you found one finds routes for walking/driving
+						-to a parking lot/garage
+						-to your classes
+						-to friends apartment/duplex/dorm ect
+						-to the landlord if needed
+					
+			
+			
+			User Stories:
+					as an admin i want to edit student info as in dorm rooms and student number
+						-confirm damage for each dorm rooms 
+						-see reports from students who requested a dorm change, damage report or complaints because then they cant be blamed if the student says they filled
+								a report or not
+					as a student(dorm) i want to edit your profile
+						-when entering a dorm you fill out a forum on everything you notice about the dorm and damage
+						-make requests for a new dorm
+						-fill out forums to send to admins that have to do with damage reports complaints ect.
+					as a student(residential) i want to be able to organize everything yourself or with a group because there are too many problems between roommates
+								that have to do with miscommunication.
+						-create a group list of potential places to stay because some places could be forgot about if they arnt written down or if one person finds a place 
+								by chance and forgets to tell the others they can easily add it to the list when its found
+						- when you find a place edit all the noticeable features (damage, rent amount, electronics, utilities)
+						- give notifications to you or the group when rent is commming up
+						- have an organized list of all the electronics or personal stuff that you want to keep track of
+						- Google maps with all the closest places to get beer/alcohol
+						- if a landlord has a profile for the place you could submit reports for moving in to confirm everything noticeable for the house
+							*make damage reports.
+					as a landlord i want to  view the status of your houses/places where students are staying 
+						-confirm damage reports from tenants 
+						-have a Google map with houses/places owned that show whether they are available or not viewable by potential tenants looking for places to stay
+								because it will streamline the landlords ability to manage their houses
+			
+			
+	Timeline:
+			Week_One:
+							()/:Wednesday-decide on what web format to user
+							()/:Wednesday-set up a website
+							()/:Wednesday-make the user roles
+							()/:Thursday morning-confirm that each user can be set up properly
+							()/:Thursday-integrate google maps onto a page with different partial views for a map to set up finding places to stay and organizing routs to take 
+							()/:Friday- make a group page for students and tenants
+							()/:Friday- create pages and links to each page
+									Examples>
+										()*profiles
+										()*maps
+										()*group page
+
+							
+			Week_Two:
+							()/:Monday- create the forums for each option
+								Examples>
+									()*damage reports
+									()*complaints
+									()*changing dorm rooms
+							()/:Tuesday- extend the group page to organize personal belongings between roommates
+							()/:Wednesday- create a mobile app using mobileframe/sitefinity to set up the app
+							()/:Wednesday- make sure pages on the mobile app can do everything properly
+								Examples>
+									()*has user roles that are set up properly
+									()*submit reports to admins landlords
+									()*view maps
+									()*set up group pages
+							()/:Thursday- tweak mobile app to run the same way the website runs
+							()/:Thursday- set up a page for admins and landlords that has a Google map for landlords that shows places available to stay\
+								  \admins have a list on available dorms to move to or into
+							()/:Friday- tweak the look of the website to look more organized/visually nice to look at
+
+
+			Final_W33K:
+							()/:Monday- make sure each page and feature runs properly and leads to pages that work and nothing breaks the site
+							()/:Monday- practice presenting
+							()/:Tuesday- present/practice presenting
+							
+							Review+
+}
