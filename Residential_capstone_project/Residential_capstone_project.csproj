@@ -191,6 +191,9 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MapsController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\StaticController.cs" />
+    <Compile Include="Controllers\TableAPIController.cs" />
+    <Compile Include="Controllers\TableDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -225,19 +228,19 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Images\ui-bg_diagonals-small_50_262626_40x40.png" />
-    <Content Include="Images\ui-bg_glass_40_0a0a0a_1x400.png" />
-    <Content Include="Images\ui-bg_glass_55_f1fbe5_1x400.png" />
-    <Content Include="Images\ui-bg_glass_60_000000_1x400.png" />
-    <Content Include="Images\ui-bg_gloss-wave_55_000000_500x100.png" />
-    <Content Include="Images\ui-bg_gloss-wave_85_9fda58_500x100.png" />
-    <Content Include="Images\ui-bg_gloss-wave_95_f6ecd5_500x100.png" />
-    <Content Include="Images\ui-icons_000000_256x240.png" />
-    <Content Include="Images\ui-icons_1f1f1f_256x240.png" />
-    <Content Include="Images\ui-icons_9fda58_256x240.png" />
-    <Content Include="Images\ui-icons_b8ec79_256x240.png" />
-    <Content Include="Images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\images\misc\Images\ui-bg_diagonals-small_50_262626_40x40.png" />
+    <Content Include="Content\images\misc\Images\ui-bg_glass_40_0a0a0a_1x400.png" />
+    <Content Include="Content\images\misc\Images\ui-bg_glass_55_f1fbe5_1x400.png" />
+    <Content Include="Content\images\misc\Images\ui-bg_glass_60_000000_1x400.png" />
+    <Content Include="Content\images\misc\Images\ui-bg_gloss-wave_55_000000_500x100.png" />
+    <Content Include="Content\images\misc\Images\ui-bg_gloss-wave_85_9fda58_500x100.png" />
+    <Content Include="Content\images\misc\Images\ui-bg_gloss-wave_95_f6ecd5_500x100.png" />
+    <Content Include="Content\images\misc\Images\ui-icons_000000_256x240.png" />
+    <Content Include="Content\images\misc\Images\ui-icons_1f1f1f_256x240.png" />
+    <Content Include="Content\images\misc\Images\ui-icons_9fda58_256x240.png" />
+    <Content Include="Content\images\misc\Images\ui-icons_b8ec79_256x240.png" />
+    <Content Include="Content\images\misc\Images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\images\misc\Images\ui-icons_ffffff_256x240.png" />
     <Content Include="Map\PersonalMap.html" />
     <Content Include="Map\PlacesMap.html" />
     <Content Include="Scripts\angular-google-maps-street-view.js" />
@@ -258,6 +261,7 @@
     <Content Include="Map\GroupMap.cshtml" />
     <Content Include="Map\LandlordMap.cshtml" />
     <None Include="Scripts\jquery-3.0.0.intellisense.js" />
+    <Content Include="Scripts\app\TableControllers.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jmelosegui.googlemap.js" />
@@ -336,6 +340,12 @@
     <Content Include="Views\Maps\EditPersonalMap.cshtml" />
     <Content Include="Views\Forum\ForumsProfile.cshtml" />
     <Content Include="Views\Maps\Index.cshtml" />
+    <Content Include="Views\Static\Index.cshtml" />
+    <Content Include="Views\Static\Table_List.cshtml" />
+    <Content Include="Views\Static\Table_Edit.cshtml" />
+    <Content Include="Views\Static\Table_Details.cshtml" />
+    <Content Include="Views\Static\Table_Delete.cshtml" />
+    <Content Include="Views\Shared\_Table.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

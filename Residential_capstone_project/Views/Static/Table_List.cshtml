@@ -1,0 +1,24 @@
+﻿    @{
+        Layout = null;
+    }
+    <h2>Table</h2>
+    <p>
+        <a href="#/Table/Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+        <tr>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in data">
+            <td>
+                <a ng-href="#/Table/Edit/{{item.Id}}">Edit</a> |
+                <a ng-href="#/Table/{{item.Id}}">Details</a> |
+                <a ng-href="#/Table/Delete/{{item.Id}}">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    
+    </table>

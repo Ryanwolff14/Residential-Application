@@ -3,6 +3,7 @@
 /// <reference path="angular-google-maps.min.js" />
 /// <reference path="angular-google-maps-street-view.min.js" />
 /// <reference path="angular-mocks.js" />
+/// <reference path="app/tablecontrollers.js" />
 /// <reference path="bootstrap.min.js" />
 /// <reference path="jmelosegui.googlemap.js" />
 /// <reference path="jquery.validate.min.js" />

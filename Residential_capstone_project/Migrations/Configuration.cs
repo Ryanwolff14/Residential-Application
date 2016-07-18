@@ -26,6 +26,8 @@ namespace Residential_capstone_project.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            //DbSet<T>.AddOrUpdate()
         }
     }
 }
